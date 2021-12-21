@@ -21,6 +21,8 @@
                 display: flex;
                 flex-flow: row nowrap;
                 height: 100px;
+                align-items: center;
+           
             }
     
                 .logo{
@@ -53,19 +55,27 @@
     
         .section{
             background: #000;
-             }
+            display: flex;
+        }
              .articulos{
                  background: #5584AC;
-                 }
+                 flex: 2 1 auto;
+                 display: flex;
+                 flex-flow: row wrap ;
+                }
                     .article{
                         background: #96c0e5;
+                        flex: 1 1 40%;
+                        
                     }
              
                     .navegacion{
                         background: #064663;
+                        flex: 1 1 100%;
              }    
              .aside{
                  background: #C84B31;
+                 flex: 1 1 auto;
              }
                      .publicidad{
                         background: #cec224;
@@ -74,7 +84,45 @@
     
         .footer{
             background: #000;
+            display: flex;
+            justify-content: center;
         }
             .pie{
                 background-color: #FABB51;
+                width: 300px;
+                
             }
+
+        
+
+               
+@media all and (max-width: 800px){
+/*  Formato Tablet */
+    .section{
+        flex-direction: column;
+
+    }
+
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+@media all and (max-width: 600px)  {
+ /*  Formato Movil */
+    .articulos{
+        flex-direction: column ;
+    }
+
+}         
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+
+}
